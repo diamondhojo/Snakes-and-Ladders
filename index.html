@@ -4,15 +4,18 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Snakes and Ladders</h1>
+        <h1 id="title">Snakes and Ladders</h1>
 
         <div id="app">
-            <label for="player1">Player 1:</label>
-                <input id="player1" disabled=True name="player1"><br><br>
-            <label for="player2">Player 2:</label>
-                <input id="player2" disabled=True name="player2"><br><br>
+            <p1 id="player1txt">Player 1:</p1>
+            <input id="player1" disabled=True name="player1"><br><br>
+            
+            <p1 id="player2txt">Player 2:</p1>
+            <input id="player2" disabled=True name="player2"><br><br>
+            
             <input type="submit" id="roll" value="Roll" onclick="roll()">
-            <input type="submit" id="reset" value="Reset" onclick="resetGame()">
+            <input type="submit" id="reset" value="Reset" onclick="location.reload()">
+            <h2 id="label">Snake</h2>
         </div>
 
         <script src="backend.js"></script>
