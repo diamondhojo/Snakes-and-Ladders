@@ -10,9 +10,9 @@
     align-items: center; /* centers text vertically */
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
-    font-size: 25px;
-    width: 65px;
-    height: 65px;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
 }
 
 input[type=submit]{
@@ -43,4 +43,10 @@ input[type=submit]{
 #label{
     font-size: 25px;
     padding-left: 10px;
+    visibility: hidden;
+}
+
+#score{
+    padding-left: 10px;
+    visibility: hidden;
 }

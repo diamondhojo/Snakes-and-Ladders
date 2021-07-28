@@ -20,22 +20,26 @@ function roll(){
     number = Math.floor((Math.random() * 6) + 1);
     
     if(player == 1){
+        document.getElementById("score").innerHTML = "Player 1 rolled a " + number
+        document.getElementById("score").style.visibility = "visible"
+        
         var oldPos = 1
         if(p1 > 0){ //p1 > 0 prevents uncaught type error (oldPos can't be 0 whenever it's called)
             oldPos = p1 //temporary storage of last positon
         }
         
         p1 += number
+
         if(snakes.includes(p1)){
             p1 = p1-+ 10
-            console.log("snakes")
             document.getElementById("label").innerHTML = "Snake! -10pts"
+            document.getElementById("label").style.visibility = "visible"
         } else if(ladders.includes(p1)){
             p1 = p1 + 10
-            console.log("ladder")
             document.getElementById("label").innerHTML = "Ladder! +10pts"
+            document.getElementById("label").style.visibility = "visible"
         } else {
-            document.getElementById("label").innerHTML = ""
+            document.getElementById("label").style.visibility = "hidden"
         }
 
         if(p1 == p2){ //same spot
@@ -63,6 +67,9 @@ function roll(){
         
         player = 2
     } else if(player = 2){
+        document.getElementById("score").innerHTML = "Player 2 rolled a " + number
+        document.getElementById("score").style.visibility = "visible"
+
         var oldPos = 1
         if(p2 > 0){
             oldPos = p2
@@ -72,14 +79,14 @@ function roll(){
 
         if(snakes.includes(p2)){
             p2 = p2-+ 10
-            console.log("snakes")
             document.getElementById("label").innerHTML = "Snake! -10pts"
+            document.getElementById("label").style.visibility = "visible"
         } else if(ladders.includes(p2)){
             p2 = p2 + 10
-            console.log("ladder")
             document.getElementById("label").innerHTML = "Ladder! +10pts"
+            document.getElementById("label").style.visibility = "visible"
         } else {
-            document.getElementById("label").innerHTML = ""
+            document.getElementById("label").style.visibility = "hidden"
         }
 
         if(p1 == p2){
